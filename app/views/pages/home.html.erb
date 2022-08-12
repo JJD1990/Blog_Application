@@ -4,6 +4,7 @@
   <div class="card-actions mb-3">
     <%= link_to "About Me", about_path, class:"btn btn-secondary" %>
     <%= link_to "Blog", posts_path, class:"btn btn-primary" %>
+    <%= link_to "Buy Products", checkout_path, class:"btn btn-success" %>
   </div>
 </div>
 <% if current_user %>
@@ -17,5 +18,6 @@
       <li><%= current_user.address.postcode %></li>
       <li><%= current_user.address.country.titleize %></li>
     </ul>
+    <%= link_to "Manage Billing", @portal_session.url, class: 'btn w-25 btn-outline-success' %>
   </div>
 <% end %>
