@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :projects
+  get 'members/dashboard'
   resources :categories
   authenticated :user, ->(user) { user.admin? } do
     get 'admin', to: 'admin#index'
@@ -7,6 +9,11 @@ Rails.application.routes.draw do
     get 'admin/users'
     get 'admin/post/:id', to: 'admin#show_post', as: 'admin_post'
   end
+
+  get 'checkout', to: 'checkouts#show'
+  get 'checkout/success', to: 'checkouts#success'
+  get 'billing', to: 'billing#show' 
+
 
   get 'search', to: 'search#index'
 
