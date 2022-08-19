@@ -9,3 +9,5 @@ pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
 pin 'chartkick', to: 'chartkick.js'
 pin 'Chart.bundle', to: 'Chart.bundle.js'
+pin "picmo", to: "https://ga.jspm.io/npm:picmo@5.5.2/dist/index.js"
+pin "@picmo/popup-picker", to: "https://ga.jspm.io/npm:@picmo/popup-picker@5.5.2/dist/index.js"
