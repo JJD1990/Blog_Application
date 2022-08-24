@@ -2,11 +2,11 @@ class ApplicationController < ActionController::Base
   before_action :set_notifications, if: :current_user
   before_action :set_categories
   before_action :set_query
-  before_action :set_stripe
+  # before_action :set_stripe
   
-  def set_stripe
-    Stripe.api_key = ENV['STRIPE_API_KEY']
-  end
+  # def set_stripe
+  #   Stripe.api_key = ENV['STRIPE_API_KEY']
+  # end
 
   def set_query
     @query = Post.ransack(params[:q])
